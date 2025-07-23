@@ -700,4 +700,54 @@ body.light-mode {
 body.dark-mode {
   background-color: rgba(0, 0, 0, 0.9);
   color: #000000ed;
+}/* Container around video */
+.video-container {
+    position: relative;
+    width: 300px;
+    margin: 50px auto;
+    display: inline-block;
+}
+
+/* Video Styling */
+.curved-video {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+    z-index: 1;
+}
+
+/* Button Styling */
+.hover-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2; /* Ensures button is above video */
+}
+
+/* Show button on hover */
+.video-container:hover .hover-button {
+    opacity: 1;
+}
+
+/* Button hover effect */
+.hover-button:hover {
+    background: #ff4b2b;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Caption */
+.video-container h3 {
+    text-align: center;
+    margin-top: 8px;
 }
